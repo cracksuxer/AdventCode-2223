@@ -8,10 +8,10 @@ You don't need a computer science background to participate - just a little prog
 
 ## Schedule
 **Day 1**: [Calorie Counting](https://github.com/cracksuxer/AdventCode-2223/tree/Day1) (✔️)
-**Day 2:** Unknown(❌)__
-**Day 3:** Unknown(❌)__
-**Day 4:** Unknown(❌)__
-**Day 5:** Unknown(❌)
+**Day 2:** Unknown(❌)\
+**Day 3:** Unknown(❌)\
+**Day 4:** Unknown(❌)\
+**Day 5:** Unknown(❌)\
 **Day 6:** Unknown(❌)
 **Day 7:** Unknown(❌)
 **Day 8:** Unknown(❌)

@@ -13,6 +13,9 @@ def main():
     #         line_copy = line.rstrip('\n')
     #         calories_sum += int(line_copy)
 
+
+    # Pure functional
+
     elves_calories = sum(sorted(list(map(lambda x: sum(map(int, x.splitlines())), f.read().split('\n\n'))), reverse=True)[:3])
     f.close()
     print(elves_calories)

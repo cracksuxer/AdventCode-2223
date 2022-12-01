@@ -1,21 +1,21 @@
 import os
 def main():
-    elves_calories = []
-    calories_sum = 0
-
     f = open("input.txt", "r")
 
-    for line in f:
-        if line == '\n':
-            elves_calories.append(calories_sum)
-            calories_sum = 0
-        else:
-            line_copy = line.rstrip('\n')
-            calories_sum += int(line_copy)
-            
+    # elves_calories = []
+    # calories_sum = 0
+
+    # for line in f:
+    #     if line == '\n':
+    #         elves_calories.append(calories_sum)
+    #         calories_sum = 0
+    #     else:
+    #         line_copy = line.rstrip('\n')
+    #         calories_sum += int(line_copy)
+
+    elves_calories = sum(sorted(list(map(lambda x: sum(map(int, x.splitlines())), f.read().split('\n\n'))), reverse=True)[:3])
     f.close()
-    three_best_sum = sum(sorted(elves_calories, reverse=True)[:3])
-    print(three_best_sum)
+    print(elves_calories)
 
 
 main()

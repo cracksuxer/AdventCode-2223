@@ -7,29 +7,29 @@ _Advent of Code_  is an  [Advent calendar](https://en.wikipedia.org/wiki/Advent_
 You don't need a computer science background to participate - just a little programming knowledge and some  [problem solving skills](https://www.reddit.com/r/adventofcode/comments/7kd8jt/what_would_you_say_are_the_minimal_skills_for/dre0uu3/)  will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.
 
 ## Schedule
-**Day 1**: [Calorie Counting](https://github.com/cracksuxer/AdventCode-2223/tree/Day1) (✔️)
+**Day 1**: [Calorie Counting](https://github.com/cracksuxer/AdventCode-2223/tree/Day1) (✔️)\
 **Day 2:** Unknown(❌)\
 **Day 3:** Unknown(❌)\
 **Day 4:** Unknown(❌)\
 **Day 5:** Unknown(❌)\
-**Day 6:** Unknown(❌)
-**Day 7:** Unknown(❌)
-**Day 8:** Unknown(❌)
-**Day 9:** Unknown(❌)
-**Day 10:** Unknown(❌)
-**Day 11:** Unknown(❌)
-**Day 12:** Unknown(❌)
-**Day 13:** Unknown(❌)
-**Day 14:** Unknown(❌)
-**Day 15:** Unknown(❌)
-**Day 16:** Unknown(❌)
-**Day 17:** Unknown(❌)
-**Day 18:** Unknown(❌)
-**Day 19:** Unknown(❌)
-**Day 20:** Unknown(❌)
-**Day 21:** Unknown(❌)
-**Day 22:** Unknown(❌)
-**Day 23:** Unknown(❌)
-**Day 24:** Unknown(❌)
-**Day 25:** Unknown(❌)
+**Day 6:** Unknown(❌)\
+**Day 7:** Unknown(❌)\
+**Day 8:** Unknown(❌)\
+**Day 9:** Unknown(❌)\
+**Day 10:** Unknown(❌)\
+**Day 11:** Unknown(❌)\
+**Day 12:** Unknown(❌)\
+**Day 13:** Unknown(❌)\
+**Day 14:** Unknown(❌)\
+**Day 15:** Unknown(❌)\
+**Day 16:** Unknown(❌)\
+**Day 17:** Unknown(❌)\
+**Day 18:** Unknown(❌)\
+**Day 19:** Unknown(❌)\
+**Day 20:** Unknown(❌)\
+**Day 21:** Unknown(❌)\
+**Day 22:** Unknown(❌)\
+**Day 23:** Unknown(❌)\
+**Day 24:** Unknown(❌)\
+**Day 25:** Unknown(❌)\
 

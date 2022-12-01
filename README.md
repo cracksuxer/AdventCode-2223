@@ -31,5 +31,5 @@ You don't need a computer science background to participate - just a little prog
 **Day 22:** Unknown(❌)\
 **Day 23:** Unknown(❌)\
 **Day 24:** Unknown(❌)\
-**Day 25:** Unknown(❌)\
+**Day 25:** Unknown(❌)
 

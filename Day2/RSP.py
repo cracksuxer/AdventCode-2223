@@ -8,54 +8,25 @@ def main():
 
     total_score = 0
 
-    # for line in f:
-    #     line = line.strip().split(" ")
-    #     if line[0] == 'A':
-    #         if line[1] == 'X':
-    #             total_score += 1 + 3
-    #         if line[1] == 'Y':
-    #             total_score += 2 + 6
-    #         if line[1] == 'Z':
-    #             total_score += 3 + 0
-    #     elif line[0] == 'B':
-    #         if line[1] == 'X':
-    #             total_score += 1 + 0
-    #         if line[1] == 'Y':
-    #             total_score += 2 + 3
-    #         if line[1] == 'Z':
-    #             total_score += 3 + 6
-    #     elif line[0] == 'C':
-    #         if line[1] == 'X':
-    #             total_score += 1 + 6
-    #         if line[1] == 'Y':
-    #             total_score += 2 + 0
-    #         if line[1] == 'Z':
-    #             total_score += 3 + 3
+    rock_paper_scissors = {"A": {"X": 4, "Y": 8, "Z": 3}, "B": {"X": 1, "Y": 5, "Z": 9}, "C": {"X": 7, "Y": 2, "Z": 6}}
 
-
+    # PART 1
     for line in f:
         line = line.strip().split(" ")
-        if line[0] == 'A':
-            if line[1] == 'X':
-                total_score += 3 + 0
-            if line[1] == 'Y':
-                total_score += 1 + 3
-            if line[1] == 'Z':
-                total_score += 2 + 6
-        elif line[0] == 'B':
-            if line[1] == 'X':
-                total_score += 1 + 0
-            if line[1] == 'Y':
-                total_score += 2 + 3
-            if line[1] == 'Z':
-                total_score += 3 + 6
-        elif line[0] == 'C':
-            if line[1] == 'X':
-                total_score += 2 + 0
-            if line[1] == 'Y':
-                total_score += 3 + 3
-            if line[1] == 'Z':
-                total_score += 1 + 6
+        total_score += rock_paper_scissors[line[0]][line[1]]
+
+
+    console.print(f"Total Score: {total_score}")
+
+    # PART 2
+    total_score = 0
+    rock_paper_scissors = {"A": {"X": 3, "Y": 4, "Z": 8}, "B": {"X": 1, "Y": 5, "Z": 9}, "C": {"X": 2, "Y": 6, "Z": 7}}
+
+    f1 = open("input.txt", "r")
+
+    for line in f1:
+        line = line.strip().split(" ")
+        total_score += rock_paper_scissors[line[0]][line[1]]
 
     console.print(total_score)
     

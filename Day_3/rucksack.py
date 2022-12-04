@@ -12,10 +12,12 @@ def get_value(char):
 
 def main():
 
-    # console = Console()
-    # file = open("test.txt", "r")
+    console = Console()
+    file = open("test.txt", "r")
  
-    # total_sum = 0
+    total_sum = 0
+
+    # ----- PART 1 ----- #
 
     # for line in file:
     #     line_s = line.replace("\n", "")
@@ -30,23 +32,14 @@ def main():
     #             symbols[char] =  get_value(char)
 
     #     if len(symbols) > 0:
-    #         console.print(symbols)
     #         total_sum += sum(symbols.values())
 
-    #     console.print("\n")
 
-    # console.print(total_sum)
-
-    console = Console()
-    
-    file = open("input.txt", "r")
+    # ----- PART 2 ----- #
 
     lines = len(file.readlines()) // 3
 
     file.seek(0)
-
-
-    total_sum = 0
 
     console.log(log_locals=True)
 
@@ -59,14 +52,10 @@ def main():
         
         for char in line_1:
             if line_2.find(char) != -1 and line_3.find(char) != -1:
-                console.print(char, end=" ")
                 symbols[char] = get_value(char)
 
         if len(symbols) > 0:
-            console.print(symbols)
             total_sum += sum(symbols.values())
-
-        console.print("\n")
 
     console.print(total_sum)
 

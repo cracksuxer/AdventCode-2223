@@ -1,35 +1,49 @@
-# Advent Code 22/23!
+--- Day 6: Tuning Trouble ---\
+The preparations are finally complete; you and the Elves leave camp on foot and begin to make your way toward the star fruit grove.
 
+As you move through the dense undergrowth, one of the Elves gives you a handheld device. He says that it has many fancy features, but the most important one to set up right now is the communication system.
 
-## About
-_Advent of Code_  is an  [Advent calendar](https://en.wikipedia.org/wiki/Advent_calendar)  of small programming puzzles for a variety of skill sets and skill levels that can be solved in  [any](https://github.com/search?q=advent+of+code)  programming language you like. People use them as  [interview](https://y3l2n.com/2018/05/09/interview-prep-advent-of-code/)  [prep](https://twitter.com/dznqbit/status/1037607793144938497),  [company training](https://twitter.com/pgoultiaev/status/950805811583963137),  [university](https://gitlab.com/imhoffman/fa19b4-mat3006/wikis/home)  [coursework](https://gribblelab.org/teaching/scicomp2021/index.html),  [practice](https://twitter.com/mrdanielklein/status/936267621468483584)  [problems](https://comp215.blogs.rice.edu/), a  [speed contest](https://adventofcode.com/leaderboard), or to  [challenge each other](https://www.reddit.com/r/adventofcode/search?q=flair%3Aupping&restrict_sr=on).
+However, because he's heard you have significant experience dealing with signal-based systems, he convinced the other Elves that it would be okay to give you their one malfunctioning device - surely you'll have no problem fixing it.
 
-You don't need a computer science background to participate - just a little programming knowledge and some  [problem solving skills](https://www.reddit.com/r/adventofcode/comments/7kd8jt/what_would_you_say_are_the_minimal_skills_for/dre0uu3/)  will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.
+As if inspired by comedic timing, the device emits a few colorful sparks.
 
-## Schedule
-**Day 1**: [Calorie Counting](https://github.com/cracksuxer/AdventCode-2223/tree/Day1) (✔️)\
-**Day 2:** [Rock Paper Scissors](https://github.com/cracksuxer/AdventCode-2223/tree/Day2)(✔️)\
-**Day 3:** [Rucksack Reorganization](https://github.com/cracksuxer/AdventCode-2223/tree/Day3)(✔️)\
-**Day 4:** [Camp Cleanup](https://github.com/cracksuxer/AdventCode-2223/tree/Day4)(✔️)\
-**Day 5:** Unknown(❌)\
-**Day 6:** Unknown(❌)\
-**Day 7:** Unknown(❌)\
-**Day 8:** Unknown(❌)\
-**Day 9:** Unknown(❌)\
-**Day 10:** Unknown(❌)\
-**Day 11:** Unknown(❌)\
-**Day 12:** Unknown(❌)\
-**Day 13:** Unknown(❌)\
-**Day 14:** Unknown(❌)\
-**Day 15:** Unknown(❌)\
-**Day 16:** Unknown(❌)\
-**Day 17:** Unknown(❌)\
-**Day 18:** Unknown(❌)\
-**Day 19:** Unknown(❌)\
-**Day 20:** Unknown(❌)\
-**Day 21:** Unknown(❌)\
-**Day 22:** Unknown(❌)\
-**Day 23:** Unknown(❌)\
-**Day 24:** Unknown(❌)\
-**Day 25:** Unknown(❌)
+To be able to communicate with the Elves, the device needs to lock on to their signal. The signal is a series of seemingly-random characters that the device receives one at a time.
 
+To fix the communication system, you need to add a subroutine to the device that detects a start-of-packet marker in the datastream. In the protocol being used by the Elves, the start of a packet is indicated by a sequence of four characters that are all different.
+
+The device will send your subroutine a datastream buffer (your puzzle input); your subroutine needs to identify the first position where the four most recently received characters were all different. Specifically, it needs to report the number of characters from the beginning of the buffer to the end of the first such four-character marker.
+
+For example, suppose you receive the following datastream buffer:
+
+mjqjpqmgbljsphdztnvjfqwrcgsmlb
+After the first three characters (mjq) have been received, there haven't been enough characters received yet to find the marker. The first time a marker could occur is after the fourth character is received, making the most recent four characters mjqj. Because j is repeated, this isn't a marker.
+
+The first time a marker appears is after the seventh character arrives. Once it does, the last four characters received are jpqm, which are all different. In this case, your subroutine should report the value 7, because the first start-of-packet marker is complete after 7 characters have been processed.
+
+Here are a few more examples:
+
+bvwbjplbgvbhsrlpgdmjqwftvncz: first marker after character 5
+nppdvjthqldpwncqszvftbrmjlhg: first marker after character 6
+nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg: first marker after character 10
+zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw: first marker after character 11\
+How many characters need to be processed before the first start-of-packet marker is detected?
+
+Your puzzle answer was 1848.\
+
+--- Part Two ---
+Your device's communication system is correctly detecting packets, but still isn't working. It looks like it also needs to look for messages.
+
+A start-of-message marker is just like a start-of-packet marker, except it consists of 14 distinct characters rather than 4.
+
+Here are the first positions of start-of-message markers for all of the above examples:
+
+mjqjpqmgbljsphdztnvjfqwrcgsmlb: first marker after character 19
+bvwbjplbgvbhsrlpgdmjqwftvncz: first marker after character 23
+nppdvjthqldpwncqszvftbrmjlhg: first marker after character 23
+nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg: first marker after character 29
+zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw: first marker after character 26
+How many characters need to be processed before the first start-of-message marker is detected?
+
+Your puzzle answer was 2308.
+
+Both parts of this puzzle are complete! They provide two gold stars: **

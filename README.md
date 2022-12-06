@@ -12,7 +12,7 @@ You don't need a computer science background to participate - just a little prog
 **Day 3:** [Rucksack Reorganization](https://github.com/cracksuxer/AdventCode-2223/tree/Day3)(✔️)\
 **Day 4:** [Camp Cleanup](https://github.com/cracksuxer/AdventCode-2223/tree/Day4)(✔️)\
 **Day 5:** [Supply Stacks](https://github.com/cracksuxer/AdventCode-2223/tree/Day5)(✔️)\
-**Day 6:** Unknown(❌)\
+**Day 6:** [Tuning Trouble](https://github.com/cracksuxer/AdventCode-2223/tree/Day6)(✔️)\
 **Day 7:** Unknown(❌)\
 **Day 8:** Unknown(❌)\
 **Day 9:** Unknown(❌)\

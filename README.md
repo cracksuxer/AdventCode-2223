@@ -1,4 +1,4 @@
---- Day 7: No Space Left On Device ---
+--- Day 7: No Space Left On Device ---\
 You can hear birds chirping and raindrops hitting leaves as the expedition proceeds. Occasionally, you can even hear much louder sounds in the distance; how big do the animals get out here, anyway?
 
 The device the Elves gave you has problems with more than just its communication system. You try to run a system update:
@@ -32,6 +32,7 @@ $ ls\
 8033020 d.log\
 5626152 d.ext\
 7214296 k\
+\
 The filesystem consists of a tree of files (plain data) and directories (which can contain other directories or files). The outermost directory is called /. You can navigate around the filesystem, moving into or out of directories and listing the contents of the directory you're currently in.
 
 Within the terminal output, lines that begin with $ are commands you executed, very much like some modern computers:

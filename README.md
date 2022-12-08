@@ -74,9 +74,9 @@ To begin, find all of the directories with a total size of at most 100000, then 
 
 Find all of the directories with a total size of at most 100000. What is the sum of the total sizes of those directories?
 
-Your puzzle answer was 1513699.\
-
---- Part Two ---
+Your puzzle answer was 1513699.
+\
+--- Part Two ---\
 Now, you're ready to choose a directory to delete.
 
 The total disk space available to the filesystem is 70000000. To run the update, you need unused space of at least 30000000. You need to find a directory you can delete that will free up enough space to run the update.

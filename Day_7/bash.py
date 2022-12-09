@@ -96,7 +96,7 @@ class Folder:
 
 def main():
     directory = Folder("/", [], "/", None)
-    current_dir = ""
+    current_dir = directory
 
     file = open("input.txt", "r")
 
@@ -105,35 +105,31 @@ def main():
         if line.startswith("$"):
             if line_s[1] == 'cd':
                 if line_s[2] == '..':
-                    current_dir = current_dir.rsplit('/', 1)[0]
-                    if current_dir == '':
-                        current_dir = '/'
+                    current_dir = current_dir.parent
                 else:
-                    if line_s[2] == '/':
-                        current_dir = "/"
-                    elif current_dir == '/':
-                        current_dir += line_s[2]  
-                    else: 
-                        current_dir += "/" + line_s[2]
+                    for i in current_dir.subfolders:
+                        if i.name == line_s[2]:
+                            current_dir = i
+                            break
         elif line_s[0] == "dir":
-            directory.search_by_path(current_dir).add(Folder(line_s[1], [], current_dir, directory.search_by_path(current_dir)))
+            current_dir.add(Folder(line_s[1], [], current_dir.name, current_dir))
         else :
-            directory.search_by_path(current_dir).add(File(line_s[1], directory.search_by_path(current_dir), int(line_s[0])))
+            current_dir.add(File(line_s[1], current_dir, int(line_s[0])))
 
     file.close()
-    # directory.tree_print()
+    directory.tree_print()
 
     # ----- PART 1 ----- #
-    # def find_folders(d: Folder, cap: int = 100000) -> list:
-    #     folders = []
-    #     for i in d.subfolders:
-    #         if isinstance(i, Folder):
-    #             if i.size <= cap:
-    #                 folders.append(i.size)
-    #             folders += find_folders(i, cap)
-    #     return folders
+    def find_folders(d: Folder, cap: int = 100000) -> list:
+        folders = []
+        for i in d.subfolders:
+            if isinstance(i, Folder):
+                if i.size <= cap:
+                    folders.append(i.size)
+                folders += find_folders(i, cap)
+        return folders
 
-    # print(f"Sum of folders with size <= 100000: {sum(find_folders(directory))}")
+    print(f"Sum of folders with size <= 100000: {sum(find_folders(directory))}")
 
     # ----- PART 2 ----- #
     total_space = directory.size
